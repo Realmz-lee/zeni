@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeni — Your AI Best Friend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <div class="zeni-header">
+            <div class="zeni-orb"></div>
+            <div class="zeni-title">
+                <h1>Zeni</h1>
+                <p>Your AI Best Friend</p>
+            </div>
+            <div class="status-badge" id="statusBadge">🔴 Connecting...</div>
+            <div class="settings-icon" id="settingsToggle">⚙️</div>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message zeni">
+                <div class="bubble">
+                    Hey! I'm Zeni. ✨<br><br>
+                    I remember everything you tell me. Your dreams, your goals, your memories.<br><br>
+                    What's on your mind today?
+                </div>
+                <div class="timestamp">Just now</div>
+            </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typingIndicator">
+            <span></span><span></span><span></span>
+            <span style="margin-left: 8px;">Zeni is thinking...</span>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Talk to Zeni..." autocomplete="off">
+            <button id="sendBtn">Send</button>
+        </div>
+
+        <!-- Settings Panel -->
+        <div class="settings-panel" id="settingsPanel">
+            <div class="settings-header">
+                <span>⚙️ Zeni Settings</span>
+                <button id="closeSettings">✕</button>
+            </div>
+            <div class="settings-row">
+                <label>🧠 Personality</label>
+                <select id="personalitySelect">
+                    <option value="friend">Friend (Casual & Supportive)</option>
+                    <option value="mentor">Mentor (Professional & Growth)</option>
+                    <option value="coach">Coach (Pushes Your Goals)</option>
+                    <option value="bestie">Best Friend (Fun & Personal)</option>
+                </select>
+            </div>
+            <div class="settings-row">
+                <label>🆔 User ID</label>
+                <input type="text" id="userIdInput" placeholder="your-name-or-email">
+            </div>
+            <div class="settings-row">
+                <label>🔗 Backend URL</label>
+                <input type="text" id="backendUrl" value="http://localhost:8000">
+            </div>
+            <div class="settings-row">
+                <label>🗑️ Clear Memory</label>
+                <button id="clearMemoryBtn">Clear My Memories</button>
+            </div>
+            <div class="settings-row">
+                <label id="memoryCountLabel">📝 Memories: Loading...</label>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
